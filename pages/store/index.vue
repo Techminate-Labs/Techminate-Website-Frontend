@@ -1,17 +1,17 @@
 <template>
   <div>
-    <Portfolio/>
+    <StoreComponents />
   </div>
 </template>
 
 <script>
-import Portfolio from "@/components/Portfolio.vue"
+import StoreComponents from "@/components/StoreComponents.vue"
 export default {
   components:{
-    Portfolio,
+    StoreComponents,
   },
   metaInfo: {
-    title: 'Portfolio'
+    title: 'store'
   }
 }
 </script>
