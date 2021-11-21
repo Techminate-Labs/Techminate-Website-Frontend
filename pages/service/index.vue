@@ -1,14 +1,14 @@
 <template>
   <div>
-    <Portfolio/>
+    <ServiceComponents />
   </div>
 </template>
 
 <script>
-import Portfolio from "@/components/Portfolio.vue"
+import ServiceComponents from "@/components/ServiceComponents.vue"
 export default {
   components:{
-    Portfolio,
+    ServiceComponents,
   },
   metaInfo: {
     title: 'Portfolio'
