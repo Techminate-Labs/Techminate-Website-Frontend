@@ -22,11 +22,38 @@
             </v-card>
           </v-col>
         </v-row>
+        <ul v-for="(t, index) in allTeam.edges" :key="index">
+          <li>{{t.node.name}}
+            <ul v-for="(x, index) in t.node.memberSet.edges" :key="index">
+              <li>{{x.node.name}}</li>
+            </ul>
+          </li>
+        </ul>
       </v-container>
     </div>
 </template>
 
 <script>
+import gql from 'graphql-tag'
+// import allTeam from '@/graphql/queries/Members'
+const allTeam = gql`
+query{
+  allTeam{
+    edges{
+      node{
+        name
+        memberSet{
+          edges{
+            node{
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}
+`
 export default {
   metaInfo: {
     
@@ -58,6 +85,11 @@ export default {
   created(){
     this.filtered = this.projectlist;
   },
+  apollo:{
+    allTeam: {
+      query : allTeam
+    }
+  },
   methods:{
     filterData(type){
       if(type=="all"){
@@ -71,7 +103,7 @@ export default {
   computed:{
     projects: function(){
       return this.filtered;
-    }
+    },
   },
 
 }
