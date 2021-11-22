@@ -7,26 +7,25 @@
           </v-col>
           <v-col cols="12" sm="12" md="5" lg="4">
             <div class="pa-10 white--text text-uppercase hidden-sm-and-down">
-              <p class="font-weight-medium text-h5">Secure and Clean Code</p>
-              <p class="font-weight-medium text-h3 mt-10">We manage your all in</p>
-              <p class="d-block font-weight-medium text-h3 mb-10">all digital services</p>
-              <span class="font-weight-medium text-subtitle-1">We are leading technology solutions providing company</span>
-              <span class="d-block font-weight-medium text-subtitle-1">all over the world doing over 5 years</span>
+              <p class="font-weight-medium text-h3 mt-10">Business</p>
+              <p class="font-weight-medium text-h3">Inspiration</p>
+              <p class="font-weight-medium text-h3 mb-10">Technology</p>
+              <span class="font-weight-medium text-subtitle-1">"{ Lets Build Something Special }"</span>
             </div>
             <div class="white--text text-uppercase hidden-md-and-up">
-              <p class="font-weight-medium text-h5">Secure and Clean Code</p>
-              <p class="font-weight-medium text-h3 mt-10">We manage your all in</p>
-              <p class="d-block font-weight-medium text-h3 mb-10">all digital services</p>
-              <span class="font-weight-medium text-subtitle-1">We are leading technology solutions providing company all over the world doing over 5 years</span>
+              <p class="font-weight-medium text-h3 mt-10">Business</p>
+              <p class="font-weight-medium text-h3">Inspiration</p>
+              <p class="font-weight-medium text-h3 mb-10">Technology</p>
+              <span class="font-weight-medium text-subtitle-1">"~Lets Build Something Special"</span>
             </div>
           </v-col>
           <v-col cols="12" sm="12" md="6" lg="4">
             <div class="text-center">
               <span class="hidden-sm-and-down">
-                <v-img alt="home" src="~/assets/home/Rectangle.png" quality="90" width="550" height="500" fit="fill"/>
+                <img class="self-center" alt="home" src="~/assets/home/Rectangle.png" quality="90" width="550" height="500" fit="fill" />
               </span>
               <span class="hidden-md-and-up">
-                <v-img class="mt-5 mb-5" alt="home" src="~/assets/home/Rectangle.png" quality="90" width="300" height="300" fit="fill"/>
+                <img class="mt-5 mb-5" alt="home" src="~/assets/home/Rectangle.png" quality="90" width="550" height="500" fit="fill"/>
               </span>
             </div>
           </v-col>

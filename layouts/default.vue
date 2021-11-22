@@ -1,51 +1,37 @@
 <template>
-  <v-app dark>
-    <v-app-bar
-      fixed
-      app
-    >
-      <NuxtLink to="/" class="mr-2">
-        <v-img alt="logo" src="https://buddypress.org/media/disc.png" width="40px" height="40px"
-  contain></v-img>
-      </NuxtLink>
+  <v-app>
+    <v-app-bar fixed app color="rgba(241, 90, 34, 1)" flat>
+      <img class="self-center" alt="logo" src="~/assets/logo/logo_white.png" width="180px" height="38px" contain />
       <v-spacer></v-spacer>
-      <NuxtLink to="/" class="ma-5">
-        <span class="grey--text">Home</span>
+      <NuxtLink to="/" class="ma-3">
+        <span class="white--text">Home</span>
       </NuxtLink>
-      <NuxtLink to="/whychooseus" class="ma-5">
-        <span class="grey--text">Why choose us ?</span>
+      <NuxtLink to="/whychooseus" class="ma-3">
+        <span class="white--text">Why choose us ?</span>
       </NuxtLink>
-      <NuxtLink to="/portfolio" class="ma-5">
-        <span class="grey--text">Portfolio</span>
+      <NuxtLink to="/portfolio" class="ma-3">
+        <span class="white--text">Portfolio</span>
       </NuxtLink>
-      <NuxtLink to="/team" class="ma-5">
-        <span class="grey--text">Team</span>
+      <NuxtLink to="/team" class="ma-3">
+        <span class="white--text">Team</span>
       </NuxtLink>
-      <NuxtLink to="/store" class="ma-5">
-        <span class="grey--text">store</span>
+      <NuxtLink to="/store" class="ma-3">
+        <span class="white--text">store</span>
       </NuxtLink>
-      <NuxtLink to="/contact" class="ma-5">
-        <span class="grey--text">Contact</span>
+       <NuxtLink to="/job" class="ma-3">
+        <span class="white--text">Job</span>
+      </NuxtLink>
+      <NuxtLink to="/contact" class="ma-3">
+        <span class="white--text">Contact</span>
       </NuxtLink>
     </v-app-bar>
     <v-main>
-      <Nuxt />
+      <div class="orange lighten-5">
+        <Nuxt />
+      </div>
     </v-main>
     <!-- Footer -->
-      <Footer />
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <v-row
-        justify="space-between"
-        no-gutters
-      >
-        <strong>Powered By : Techminate</strong>
-        <strong>Copyright@Techminate {{ new Date().getFullYear() }} </strong>
-      </v-row>
-    </v-footer>
-
+    <Footer />
   </v-app>
 </template>
 
@@ -57,7 +43,7 @@ export default {
   },
   data () {
     return {
-      fixed: false,
+      //
     }
   }
 }
