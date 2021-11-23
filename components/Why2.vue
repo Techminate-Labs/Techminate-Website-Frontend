@@ -7,20 +7,16 @@
                     <p class="mt-5">When building business web apps, one of the most common tasks is data entry, that is, lots of webforms bound to domain objects or POJOs, validated against sometimes complex logic and finally persisted in a database or perhaps over REST to a remote server.</p>
                 </div>
                 <div class="mt-10">
-                    <v-list two-line color="gray lighten-4">
-                        <template v-for="(item, index) in data">
-                            <v-list-item :key="index" >
-                                <v-list-item-avatar size="60">
-                                    <v-icon size="50" :color="item.color">{{ item.icon }}</v-icon>
-                                </v-list-item-avatar>
-                                <v-list-item-content>
-                                    <v-list-item-title v-html="item.title" class="font-weight-medium"></v-list-item-title>
-                                    <v-list-item-subtitle v-html="item.description"></v-list-item-subtitle>
-                                </v-list-item-content>
-                            </v-list-item>
-                        </template>
-                    </v-list>
-                </div>
+                    <div v-for="(item, index) in data" :key="index" class="d-flex my-6">
+                        <div class="mr-3">
+                            <v-icon left size="50" :color="item.color">{{ item.icon }}</v-icon>
+                        </div>
+                        <div>
+                          <span>{{ item.title }}</span>
+                          <p>{{ item.description }}</p>
+                        </div>
+                    </div>
+                </div>     
             </v-col>
             <v-col cols="12" sm="12" md="6" lg="6">
                 <div class="text-center mt-15">
