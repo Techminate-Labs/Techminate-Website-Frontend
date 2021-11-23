@@ -1,9 +1,9 @@
 <template>
-  <Layout>
+  <div>
     <Why1 />
-    <Why2 />
     <Workflow />
-  </Layout>
+    <Why2 />
+  </div>
 </template>
 
 <script>
