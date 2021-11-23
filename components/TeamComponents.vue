@@ -4,7 +4,7 @@
         <p class="pa-5 mt-10 text-h5 font-weight-medium text-uppercase text-center">Core Team</p>
         <v-row>
           <v-col cols="12" sm="12" md="3" v-for="(member, index) in members" :key="index">
-            <v-card width="250" class="rounded-xl mx-auto bg-white">
+            <v-card width="280" class="rounded-xl mx-auto bg-white">
                 <div class="text-center">
                   <v-avatar size="120" class="mt-5">
                     <v-img :src="member.get_image"></v-img>
@@ -60,7 +60,7 @@
         <p class="pa-5 mt-10 text-h5 font-weight-medium text-uppercase text-center">Business Development Team</p>
           <v-row>
             <v-col cols="12" sm="12" md="3" v-for="(member, index) in business" :key="index">
-              <v-card width="250" class="rounded-xl mx-auto">
+              <v-card width="280" class="rounded-xl mx-auto">
                   <div class="text-center">
                     <v-avatar size="120" class="mt-5">
                       <v-img :src="member.get_image"></v-img>
@@ -116,7 +116,7 @@
         <p class="pa-5 mt-10 text-h5 font-weight-medium text-uppercase text-center">Contributors</p>
           <v-row>
             <v-col cols="12" sm="12" md="3" v-for="(member, index) in contributors" :key="index">
-              <v-card width="250" class="rounded-xl mx-auto">
+              <v-card width="280" class="rounded-xl mx-auto">
                   <div class="text-center">
                     <v-avatar size="120" class="mt-5">
                       <v-img :src="member.get_image"></v-img>

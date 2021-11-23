@@ -3,8 +3,6 @@
     <Why1 />
     <Why2 />
     <Workflow />
-    <Why1 />
-    <Why2 />
   </Layout>
 </template>
 

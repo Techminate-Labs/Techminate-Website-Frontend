@@ -4,7 +4,7 @@
             <v-col cols="12" sm="12" md="6" lg="6">
                 <div class="text-center">
                     <span class="hidden-sm-and-down">
-                        <v-img class="mt-15" src="~/assets/about/about.png" quality="90" width="620" height="500" fit="fill"></v-img>
+                        <img class="mt-15" src="~/assets/about/about.png" quality="90" width="620" height="500" fit="fill" />
                     </span>
                 </div>
             </v-col>

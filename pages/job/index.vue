@@ -1,18 +1,39 @@
 <template>
-   <div>
-    <ul v-for="(t, index) in job" :key="index">
-        <li>title : {{t.node.title}}</li>
-        <li>Tasks : 
-            <ul v-for="(x, index) in t.node.tasks.edges" :key="index">
-                <li>{{index+1}}</li>
-                <li>{{x.node.id}}</li>
-                <li>{{x.node.title}}</li>
-                <li>{{x.node.description}}</li>
-                <li>{{x.node.bounty}}</li>
-            </ul>
-        </li>
-    </ul>
-  </div>
+  <v-main>
+    <v-container >
+      <v-card class="mx-auto my-12" max-width="674">
+        <div class="text-center d-flex pb-4">
+          <v-btn @click="all">
+            all
+          </v-btn>
+          <div>{{ panel }}</div>
+          <v-btn @click="none">
+            none
+          </v-btn>
+        </div>
+        <v-expansion-panels
+          v-model="panel"
+          multiple
+        >
+          <v-expansion-panel
+          v-for="(t, index) in job" :key="index"
+          >
+            <v-expansion-panel-header>{{t.node.title}}</v-expansion-panel-header>
+            <v-expansion-panel-content>
+              task: 
+              <ul v-for="(x, index) in t.node.tasks.edges" :key="index">
+                    <li>{{index+1}}</li>
+                    <li>{{x.node.id}}</li>
+                    <li>{{x.node.title}}</li>
+                    <li>{{x.node.description}}</li>
+                    <li>{{x.node.bounty}}</li>
+                </ul>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-expansion-panels>
+      </v-card>
+    </v-container>
+  </v-main>
 </template>
 
 <script>
