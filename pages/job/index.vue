@@ -1,7 +1,7 @@
 <template>
   <v-main>
     <v-container >
-      <v-card class="mx-auto my-12" max-width="674">
+      <v-card class="mx-auto my-12">
         <div class="text-center d-flex pb-4">
           <v-btn @click="all">
             all
@@ -66,6 +66,23 @@ query{
 }
 `
 export default {
+  data () {
+      return {
+        panel: [],
+        items: 5,
+      }
+    },
+    methods: {
+      // Create an array the length of our items
+      // with all values as true
+      all () {
+        this.panel = [...Array(this.items).keys()].map((k, i) => i)
+      },
+      // Reset the panel
+      none () {
+        this.panel = []
+      },
+    },
 components:{
   //
   },

@@ -27,13 +27,6 @@
                     required
                     placeholder="John">
                   </v-text-field>
-                  <v-text-field v-model="last" label="Last Name" outlined shaped 
-                    ref="name"
-                    :rules="[() => !!name || 'This field is required']"
-                    :error-messages="errorMessages" 
-                    required
-                    placeholder="Doe">
-                  </v-text-field>
                   <v-text-field v-model="email" label="Email Address" outlined shaped
                     ref="email"
                     :rules="[() => !!email || 'This field is required']"
@@ -61,10 +54,8 @@
                   counter="25"
                   required>
                   </v-text-field>
-                  <v-textarea filled auto-grow label="Your Message" rows="4" row-height="30" shaped></v-textarea>
+                  <v-textarea  outlined auto-grow label="Your Message" rows="4" row-height="30" shaped></v-textarea>
                   <v-card-actions>
-                    <v-btn > Cancel</v-btn>
-                    <v-spacer></v-spacer>
                     <v-btn color="primary"  @click="submit"> Send message</v-btn>
                   </v-card-actions>
                 </v-form> 

@@ -1,22 +1,29 @@
 <template>
     <div>
-      <v-footer color="deep-orange darken-3" padless :absolute="!fixed" class="hidden-sm-and-down py-4 white--text" >
+      <v-footer color="deep-orange darken-3" padless :absolute="!fixed" class="py-4 white--text" >
         <div class="container">
           <!-- add footer content here -->
-          <v-row
-            justify="center"
-            no-gutters
-          >
-            <v-btn
-              v-for="link in links"
-              :key="link"
-              color="white"
-              text
-              rounded
-              class="my-2"
-            >
-              {{ link }}
-            </v-btn>
+          <v-row>
+              <v-col cols="12" sm="12" md="3" lg="3">
+                <h3 class="mb-2">Community</h3>
+                <span class="d-block">Donate</span>
+                <span>Donate</span>
+              </v-col>
+              <v-col cols="12" sm="12" md="3" lg="3">
+                <h3 class="mb-2">Useful Links</h3>
+                <span class="d-block">Donate</span>
+                <span>Donate</span>
+              </v-col>
+              <v-col cols="12" sm="12" md="3" lg="3">
+                <h3 class="mb-2">Resources</h3>
+                <span class="d-block">Donate</span>
+                <span>Donate</span>
+              </v-col>
+              <v-col cols="12" sm="12" md="3" lg="3">
+                <h3 class="mb-2">Others</h3>
+                <span class="d-block">Donate</span>
+                <span>Donate</span>
+              </v-col>
           </v-row>
         </div>
       </v-footer>
@@ -34,15 +41,6 @@ export default {
   data () {
     return {
       fixed: true,
-      links: [
-        'Home',
-        'About Us',
-        'Team',
-        'Services',
-        'Blog',
-        'Contact Us',
-      ],
-
     }
   }
 }
