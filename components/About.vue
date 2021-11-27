@@ -10,7 +10,7 @@
             </v-col>
             <v-col cols="12" sm="12" md="6" lg="5">
                 <div class="hidden-sm-and-down">
-                    <p class="font-weight-medium text-h5 mt-10">About US</p>
+                    <p class="font-weight-medium text-h5 mt-10">About Us</p>
                     <p class="mt-5">
                         Techminate is a team of experienced software developers.
                         We are expert on SaaS, stand alone applications and unique website creation.

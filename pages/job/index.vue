@@ -4,11 +4,10 @@
       <v-card class="mx-auto my-12">
         <div class="text-center d-flex pb-4">
           <v-btn @click="all">
-            all
+            View all
           </v-btn>
-          <div>{{ panel }}</div>
           <v-btn @click="none">
-            none
+            Hide all
           </v-btn>
         </div>
         <v-expansion-panels
@@ -18,16 +17,12 @@
           <v-expansion-panel
           v-for="(t, index) in job" :key="index"
           >
-            <v-expansion-panel-header>{{t.node.title}}</v-expansion-panel-header>
+            <v-expansion-panel-header>Title : {{t.node.projectName}} | {{t.node.title}}</v-expansion-panel-header>
             <v-expansion-panel-content>
-              task: 
-              <ul v-for="(x, index) in t.node.tasks.edges" :key="index">
-                    <li>{{index+1}}</li>
-                    <li>{{x.node.id}}</li>
-                    <li>{{x.node.title}}</li>
-                    <li>{{x.node.description}}</li>
-                    <li>{{x.node.bounty}}</li>
-                </ul>
+                <p>Job ID : {{t.node.id}}</p>
+                <p>Requirements : {{t.node.requirements}}</p>
+                <p>Deadline : {{t.node.deadline}}</p>
+                <p><v-btn @click="onClick(t.node.id)">View Tasks Details Here</v-btn></p>
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
@@ -67,29 +62,23 @@ query{
 `
 export default {
   data () {
-      return {
-        panel: [],
-        items: 5,
-      }
-    },
-    methods: {
-      // Create an array the length of our items
-      // with all values as true
-      all () {
-        this.panel = [...Array(this.items).keys()].map((k, i) => i)
-      },
-      // Reset the panel
-      none () {
-        this.panel = []
-      },
-    },
-components:{
-  //
+    return {
+      panel: [],
+      items: 5,
+    }
   },
-  metaInfo: {
-    title: 'Job'
+  methods: {
+    all () {
+      this.panel = [...Array(this.items).keys()].map((k, i) => i)
+    },
+    none () {
+      this.panel = []
+    },
+    onClick(id){
+        console.log("clicked", id)
+        this.$router.push('/job/' + id)
+    },
   },
-
   async asyncData({ app, params }) {
     const client = app.apolloProvider.defaultClient;
     const { id } = params;
@@ -100,7 +89,6 @@ components:{
       },
     })
     const job = res.data.allJobs.edges;
-    console.log(job)
     return { job }
   },
 }

@@ -9,16 +9,16 @@
       <NuxtLink to="/whychooseus" class="ma-3">
         <span class="white--text">Why choose us ?</span>
       </NuxtLink>
+      <NuxtLink to="/service" class="ma-3">
+        <span class="white--text">Services</span>
+      </NuxtLink>
       <NuxtLink to="/portfolio" class="ma-3">
         <span class="white--text">Portfolio</span>
       </NuxtLink>
       <NuxtLink to="/team" class="ma-3">
         <span class="white--text">Team</span>
       </NuxtLink>
-      <NuxtLink to="/store" class="ma-3">
-        <span class="white--text">store</span>
-      </NuxtLink>
-       <NuxtLink to="/job" class="ma-3">
+      <NuxtLink to="/job" class="ma-3">
         <span class="white--text">Job</span>
       </NuxtLink>
       <NuxtLink to="/contact" class="ma-3">
