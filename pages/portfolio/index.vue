@@ -74,8 +74,8 @@ export default {
       `,
     }
   },
-
-  mounted(){
+ 
+ beforeMount(){
     this.getProjects();
     const loadFiltered = async () =>{
       try{
