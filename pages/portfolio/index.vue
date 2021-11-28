@@ -12,9 +12,9 @@
         </div>
         <div v-if="filtered.length">
         <v-row>
-          <v-col cols="12" sm="12" md="4" lg="3" v-for="(project, index) in projects" :key="index">
+          <v-col cols="12" sm="12" md="4" lg="3" v-for="(project, index) in filtered" :key="index">
              <v-card class="mx-auto" max-width="344">
-              <v-img :src="'https://res.cloudinary.com/techminate/image/upload/v1/'+project.image" height="250px"></v-img>
+              <v-img :src="'https://res.cloudinary.com/techminate/image/upload/v1/' + project.image" height="250px"></v-img>
               <p class="text-h5 text-center font-weight-bold mt-5">{{ project.title }}</p>
               <div class="d-flex justify-center">
                 <v-btn color="orange white--text mb-5" >
@@ -112,13 +112,7 @@ export default {
         this.filtered = this.projectlist.filter( d=> d.category === type)
       }
     },
-  },
-
-  computed:{
-    projects: function(){
-      return this.filtered;
-    }
-  },
+  }
 }
 </script>
 
