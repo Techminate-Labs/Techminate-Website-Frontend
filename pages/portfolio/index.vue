@@ -1,5 +1,5 @@
 <template>
-   <div>
+   <div  v-if="!$apollo.queries.allPortfolio.loading">
       <v-container >
         <p class="pa-5 mt-5 text-h5 font-weight-medium text-uppercase text-center">Our Projects</p>
         <div class="d-flex justify-center mb-5">
@@ -10,7 +10,7 @@
             <v-btn @click="filterData(app)" value="right">Apps</v-btn>
           </v-btn-toggle>
         </div>
-        <div v-if="filtered.length">
+        <div >
         <v-row>
           <v-col cols="12" sm="12" md="4" lg="3" v-for="(project, index) in projects" :key="index">
              <v-card class="mx-auto" max-width="344">
@@ -25,9 +25,7 @@
           </v-col>
         </v-row>
         </div>
-        <div v-else>
-            <Spinner />
-        </div>
+        
       </v-container>
     </div>
 </template>
@@ -36,17 +34,6 @@
 import gql from 'graphql-tag'
 import Spinner from '@/components/Spinner.vue'
 
-const allPortfolio = gql`
-query{
-  allPortfolio{
-    id
-    category
-    title
-    image
-    link
-  }
-}
-`
 export default {
   components: { Spinner },
   metaInfo: {
@@ -69,10 +56,26 @@ export default {
       filtered: [],
     }
   },
-  created(){
+
+  apollo: {
+    allPortfolio: {
+      query: gql`
+        query{
+          allPortfolio{
+            id
+            category
+            title
+            image
+            link
+          }
+        }
+      `,
+    }
   },
+created(){
+  this.getProjects();
+},
   mounted(){
-    this.getProjects();
     const loadFiltered = async () =>{
       try{
         await new Promise (resolve => {
@@ -85,12 +88,6 @@ export default {
       }
     }
     loadFiltered();
-  },
-
-apollo:{
-    allPortfolio: {
-      query : allPortfolio
-    }
   },
   methods:{
     getProjects(){

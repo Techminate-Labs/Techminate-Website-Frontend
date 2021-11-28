@@ -2,8 +2,11 @@
   <v-main>
     <div v-if="teams.length">
       <v-container>
+        <div align="center" justify="center">
+          <h1>Meet Our Team Members</h1>
+        </div>
         <span v-for="(t, index) in teams" :key="index">
-          <p class="pa-5 mt-10 text-h5 font-weight-medium text-uppercase text-center">{{t.node.name}}</p>
+          <p class="mt-5 text-h5 font-weight-medium text-uppercase text-center">{{t.node.name}}</p>
           <v-row>
             <v-col cols="12" sm="12" md="3" v-for="(member, index) in t.node.memberSet.edges" :key="index">
               <v-card width="280" class="rounded-xl mx-auto bg-white">
