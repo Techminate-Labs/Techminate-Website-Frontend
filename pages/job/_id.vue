@@ -1,39 +1,42 @@
 <template>
   <div v-if="!$apollo.queries.job.loading">
-    <v-card class="mx-auto" max-width="344">
-    <h3>Title : {{job.title}}</h3>
-    <h3>Project : {{job.projectName}}</h3>
-    <h3>Requirements : {{job.requirements}}</h3>
-    <h3>Deadline : {{job.deadline}}</h3>
-    <h3>Task List :</h3>
-    <div class="text-center d-flex pb-4">
-          <v-btn @click="all">
-            View all
-          </v-btn>
-          <v-btn @click="none">
-            none
-          </v-btn>
-        </div>
+    <v-container>
+      <v-card >
+      <div class="pa-5">
+        <h4>Job : {{job.projectName}} | {{job.title}} | {{job.deadline}}</h4>
+      </div>
+      <div class="text-center d-flex pa-5">
+        <v-btn @click="all" color="deep-orange white--text">
+          View Tasks
+        </v-btn>
+        <v-btn @click="none" color="deep-orange white--text" class="ml-5">
+          Hide Tasks
+        </v-btn>
+      </div>
         <v-expansion-panels
+          inset
+          focusable
           v-model="panel"
           multiple
         >
           <v-expansion-panel
           v-for="(x, index) in job.tasks.edges" :key="index"
           >
-            <v-expansion-panel-header>{{x.node.title}} | {{x.node.bounty}} TNBC</v-expansion-panel-header>
+            <v-expansion-panel-header><h3>Task : {{index+1}} | {{x.node.title}} | {{x.node.bounty}} TNBC</h3></v-expansion-panel-header>
             <v-expansion-panel-content>
-              task: 
-              <ul>
-                <li>Task : {{index+1}}</li>
-                <li>Title : {{x.node.title}}</li>
-                <li>Description : {{x.node.description}}</li>
-                <li>Bounty : {{x.node.bounty}}</li>
-              </ul>
+              <h4>ID :</h4>
+              <p>{{x.node.id}}</p>
+              <h4>Title:</h4>
+              <p>{{x.node.title}}</p>
+              <h4>Bounty :</h4>
+              <p>{{x.node.bounty}}</p>
+              <h4>Details:</h4>
+              <p>{{x.node.description}}</p>
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
-    </v-card>
+      </v-card>
+    </v-container>
   </div>
 </template>
 

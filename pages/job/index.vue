@@ -2,27 +2,36 @@
   <v-main>
     <v-container >
       <v-card class="mx-auto my-12">
-        <div class="text-center d-flex pb-4">
-          <v-btn @click="all">
-            View all
+        <div class="text-center d-flex pa-5">
+          <v-btn @click="all" color="deep-orange white--text">
+            View Jobs
           </v-btn>
-          <v-btn @click="none">
-            Hide all
+          <v-btn @click="none" color="deep-orange white--text ml-5">
+            Hide Jobs
           </v-btn>
         </div>
         <v-expansion-panels
+          inset
+          focusable
           v-model="panel"
           multiple
         >
           <v-expansion-panel
           v-for="(t, index) in job" :key="index"
           >
-            <v-expansion-panel-header>Title : {{t.node.projectName}} | {{t.node.title}}</v-expansion-panel-header>
+            <v-expansion-panel-header><h3>Job : {{index+1}} | {{t.node.projectName}} | {{t.node.title}}</h3></v-expansion-panel-header>
             <v-expansion-panel-content>
-                <p>Job ID : {{t.node.id}}</p>
-                <p>Requirements : {{t.node.requirements}}</p>
-                <p>Deadline : {{t.node.deadline}}</p>
-                <p><v-btn @click="onClick(t.node.id)">View Tasks Details Here</v-btn></p>
+                <h4>ID :</h4>
+                <p>{{t.node.id}}</p>
+                <h4>Title :</h4>
+                <p>{{t.node.title}}</p>
+                <h4>Project :</h4>
+                <p>{{t.node.projectName}}</p>
+                <h4>Deadline :</h4>
+                <p>{{t.node.deadline}}</p>
+                <h4>Requirements :</h4>
+                <p>{{t.node.requirements}}</p>
+                <p><v-btn @click="onClick(t.node.id)" color="deep-orange white--text">View Tasks Details Here</v-btn></p>
             </v-expansion-panel-content>
           </v-expansion-panel>
         </v-expansion-panels>
