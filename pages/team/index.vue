@@ -8,7 +8,7 @@
         <span v-for="(t, index) in teams" :key="index">
           <p class="mt-5 text-h5 font-weight-medium text-uppercase text-center">{{t.node.name}}</p>
           <v-row>
-            <v-col cols="12" sm="12" md="3" v-for="(member, index) in t.node.memberSet.edges" :key="index">
+            <v-col cols="12" sm="6" md="3" lg="3" xl="3" v-for="(member, index) in t.node.memberSet.edges" :key="index">
               <v-card width="280" class="rounded-xl mx-auto bg-white">
                   <div class="text-center">
                     <v-avatar size="120" class="mt-5">

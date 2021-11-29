@@ -21,7 +21,7 @@
             <v-col cols="12" sm="12" md="6" lg="6">
                 <div class="text-center mt-15">
                     <span class="">
-                        <img class="mt-5" src="~/assets/why/why.png" quality="90" width="600" height="392" fit="fill" />
+                        <img class="mt-5" src="~/assets/why/why2.png" quality="90" width="600" height="392" fit="fill" />
                     </span>
                 </div>
             </v-col>

@@ -6,9 +6,14 @@
           <v-col cols="12" sm="12" md="1" lg="1">
           </v-col>
           <v-col cols="12" sm="12" md="4" lg="4">
-            <div class="pa-10 white--text text-uppercase">
+            <div class="white--text text-uppercase">
               <p class="font-weight-medium text-h5">Our Workflow</p>
-              <p class="font-weight-medium mt-10">We follow these steps to process a project and handover to our clients</p>
+              <p class="font-weight-medium">We follow these steps to process a project and handover to our clients</p>
+              <div class="text-center">
+                    <span class="">
+                        <img class="mt-5" src="~/assets/workflow/workflow.png" quality="90" width="530" height="400" fit="fill" />
+                    </span>
+                </div>
             </div>
           </v-col>
           <v-col cols="12" sm="12" md="6" lg="6">

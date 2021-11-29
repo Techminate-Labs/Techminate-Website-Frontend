@@ -4,31 +4,40 @@
         <v-container>
           <!-- add footer content here -->
           <v-row>
-              <v-col cols="12" sm="12" md="3" lg="3">
-                <h3 class="mb-2">community</h3>
-                <div v-for="(item, index) in data" :key="index">
-                  <v-icon left size="25" class="mt-1">{{ item.icon }}</v-icon>
-                  <span>{{ item.name }}</span>    
-                </div>
-              </v-col>
-              <v-col cols="12" sm="12" md="3" lg="3">
-                <h3 class="mb-2">Useful Links</h3>
-                <div v-for="(item, index) in data" :key="index">
-                  <span>{{ item.name }}</span>    
-                </div>
-              </v-col>
-              <v-col cols="12" sm="12" md="3" lg="3">
-                <h3 class="mb-2">Resources</h3>
-                 <div v-for="(item, index) in data" :key="index">
-                  <span>{{ item.name }}</span>    
-                </div>
-              </v-col>
-              <v-col cols="12" sm="12" md="3" lg="3">
-                <h3 class="mb-2">Others</h3>
-                 <div v-for="(item, index) in data" :key="index">
-                  <span>{{ item.name }}</span>    
-                </div>
-              </v-col>
+            <v-col cols="12" sm="12" md="3" lg="3">
+              <h3 class="mb-2">Our Communities</h3>
+              <v-btn-toggle dense background-color="deep-orange darken-3" multiple>
+                <div v-for="(dt, index) in community" :key="index">
+                <a :href="dt.link" target="_blank" style="text-decoration:none; color:white">
+                  <v-icon size="25" class="text--darken-1 white--text pl-2">{{ dt.icon }}</v-icon>
+                </a>
+              </div>
+                </v-btn-toggle>
+            </v-col>
+            <v-col cols="12" sm="12" md="3" lg="3">
+              <h3 class="mb-2">Useful Links</h3>
+              <div v-for="(dt, index) in links" :key="index">
+                <a :href="dt.link" target="_blank" style="text-decoration:none; color:white">
+                 {{ dt.title }}
+                </a>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="12" md="3" lg="3">
+              <h3 class="mb-2">Resources</h3>
+               <div v-for="(dt, index) in resources" :key="index">
+                <a :href="dt.link" target="_blank" style="text-decoration:none; color:white">
+                 {{ dt.title }}
+                </a>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="12" md="3" lg="3">
+              <h3 class="mb-2">Others</h3>
+              <div v-for="(dt, index) in others" :key="index">
+                <NuxtLink :to="dt.link" style="text-decoration:none; color:white">
+                  <span class="white--text">{{ dt.title }}</span>
+                </NuxtLink>
+              </div>
+            </v-col>
           </v-row>
         </v-container>
       </v-footer>
@@ -46,10 +55,28 @@ export default {
   data () {
     return {
       fixed: true,
-      data:[
-        {"title":"First", "icon":"mdi-state-machine", "name":"Lorem "},
-        {"title":"Clean", "icon":"mdi-console", "name":" ipsum "},
-        {"title":"Documentation", "icon":"mdi-file-document-multiple-outline", "name":"dolor"},
+      community:[
+        {"icon":"mdi-facebook", "link":"https://www.google.com/"},
+        {"icon":"mdi-discord", "link":"https://www.google.com/"},
+        {"icon":"mdi-twitter", "link":"https://www.google.com/"},
+        {"icon":"mdi-reddit", "link":"https://www.google.com/"},
+        {"icon":"mdi-youtube", "link":"https://www.google.com/"},
+      ],
+      links:[
+        {"title":"TNBAnalytics", "link":"http://tnbanalytics.com/"},
+        {"title":"TNBPOS", "link":"https://www.google.com/"},
+        {"title":"Shiopa", "link":"https://www.google.com/"},
+        {"title":"Khana", "link":"https://www.google.com/"},
+        {"title":"EP-15", "link":"https://github.com/Techminate"},
+        
+      ],
+      resources:[
+        {"title":"Medium", "link":"https://www.google.com/"},
+        {"title":"Github", "link":"https://github.com/Techminate"},
+      ],
+      others:[
+        {"title":"Bounties", "link":"/job"},
+        {"title":"Career", "link":"/job"},
       ]
     }
   }
