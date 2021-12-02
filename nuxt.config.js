@@ -2,6 +2,12 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: 'static',
+
+  generate: {
+    fallback: true
+  },
+
   head: {
     titleTemplate: '%s - Techminate',
     title: 'Techminate',
@@ -17,6 +23,13 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+
+  loading: {
+    color: '#f69052',
+    height: '3px',
+    continuous: true,
+    duration: 3000
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -78,5 +91,5 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
 }
