@@ -3,7 +3,7 @@
     <div v-if="teams.length">
       <v-container>
         <div align="center" justify="center">
-          <h1>Meet Our Team Members</h1>
+          <h1></h1>
         </div>
         <span v-for="(t, index) in teams" :key="index">
           <p class="mt-5 text-h5 font-weight-medium text-uppercase text-center">{{t.node.name}}</p>

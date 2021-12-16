@@ -13,10 +13,10 @@
               <span class="font-weight-medium text-subtitle-1">"{ Lets Build Something Special }"</span>
             </div>
             <div class="white--text text-uppercase hidden-md-and-up">
-              <p class="font-weight-medium text-h3 mt-10">Business</p>
-              <p class="font-weight-medium text-h3">Inspiration</p>
-              <p class="font-weight-medium text-h3 mb-10">Technology</p>
-              <span class="font-weight-medium text-subtitle-1">"~Lets Build Something Special"</span>
+              <p class="font-weight-medium text-h4 mt-10">Business</p>
+              <p class="font-weight-medium text-h4">Inspiration</p>
+              <p class="font-weight-medium text-h4 mb-10">Technology</p>
+              <span class="font-weight-medium text-subtitle-1">"{ Lets Build Something Special }"</span>
             </div>
           </v-col>
           <v-col cols="12" sm="12" md="6" lg="4">
@@ -25,7 +25,7 @@
                 <img class="self-center" alt="home" src="~/assets/home/Rectangle.png" quality="90" width="550" height="500" fit="fill" />
               </span>
               <span class="hidden-md-and-up">
-                <img class="mt-5 mb-5" alt="home" src="~/assets/home/Rectangle.png" quality="90" width="550" height="500" fit="fill"/>
+                <img class="mt-5 mb-5" alt="home" src="~/assets/home/Rectangle.png" quality="90" width="300" height="350" fit="fill"/>
               </span>
             </div>
           </v-col>

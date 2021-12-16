@@ -13,15 +13,18 @@
 
 <script>
 import Navbar from '../layouts/website/Navbar.vue'
+import MobileMenu from '@/components/website/menu/MobileMenu.vue'
 import Footer from '../layouts/website/Footer.vue'
 export default {
   components: {
     Navbar,
+    MobileMenu,
     Footer
   },
   data () {
     return {
-      //
+      showMobileMenu: false,
+      showCart: false,
     }
   }
 }
