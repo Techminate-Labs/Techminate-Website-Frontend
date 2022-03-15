@@ -12,7 +12,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-4 px-5 gap-4">
        <div class="card w-86 bg-base-100 shadow-xl">
             <figure class="px-5 pt-10">
-                <img src="/Techminate.png" alt="Shoes" class="rounded-xl" />
+                <img src="https://pim-img-psmt1.aeropost.com/n/4/8/9/4/4894364195beda2a4b838969c4e4e56b148fea27_ComputersTabletsAccessories_408709_01.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{people[0].name}</h2>
@@ -21,7 +21,7 @@
        </div>
         <div class="card w-86 bg-base-100 shadow-xl">
             <figure class="px-5 pt-10">
-                <img src="/Techminate.png" alt="Shoes" class="rounded-xl" />
+                <img src="https://pim-img-psmt1.aeropost.com/n/4/8/9/4/4894364195beda2a4b838969c4e4e56b148fea27_ComputersTabletsAccessories_408709_01.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{people[0].name}</h2>
@@ -30,7 +30,7 @@
        </div>
        <div class="card w-86 bg-base-100 shadow-xl">
             <figure class="px-5 pt-10">
-                <img src="/Techminate.png" alt="Shoes" class="rounded-xl" />
+                <img src="https://pim-img-psmt1.aeropost.com/n/4/8/9/4/4894364195beda2a4b838969c4e4e56b148fea27_ComputersTabletsAccessories_408709_01.png" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{people[0].name}</h2>
@@ -40,7 +40,7 @@
        </div>
        <div class="card w-86 bg-base-100 shadow-xl">
         <figure class="px-5 pt-10">
-            <img src="/Techminate.png" alt="Shoes" class="rounded-xl" />
+            <img src="https://pim-img-psmt1.aeropost.com/n/4/8/9/4/4894364195beda2a4b838969c4e4e56b148fea27_ComputersTabletsAccessories_408709_01.png" alt="Shoes" class="rounded-xl" />
         </figure>
         <div class="card-body items-center text-center">
             <h2 class="card-title">{people[0].name}</h2>
